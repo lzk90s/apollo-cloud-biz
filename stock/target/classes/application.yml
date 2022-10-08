@@ -1,0 +1,15 @@
+server:
+  port: 22335
+
+spring:
+  application:
+    name: stock
+  profiles:
+    active: dev
+    include: default-${spring.profiles.active}
+
+tenant:
+  exclusionTable:
+    - t_stock
+    - t_stock_hq
+    - t_stock_daily

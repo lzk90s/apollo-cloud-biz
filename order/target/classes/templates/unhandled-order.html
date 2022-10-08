@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta content="text/html;charset=utf8" http-equiv="content-type"/>
+</head>
+
+<body>
+<h3>${title}</h3>
+<table border="1">
+    <thead>
+    <tr bgcolor="#FF8F59">
+        <th>订单类型</th>
+        <th>确认时间(UTC)</th>
+        <th>图片</th>
+        <th>链接</th>
+        <th>采购链接</th>
+        <th>总价($)</th>
+        <th>数量</th>
+        <th>备注</th>
+    </tr>
+    </thead>
+    <tbody>
+    <#list orders as order>
+    <tr bgcolor="<#if order.lastNotifyTime??>#FFFFFF<#else>#AFEEEE</#if>">
+        <td>${order.type!''}</td>
+        <td>${order.confirmTime!''}</td>
+        <td><img src="${order.imageUrl!''}"/></td>
+        <td><a href="${order.detailUrl!''}"><span>${order.sku!''}</span></a></td>
+        <td><a href="${order.goodsOriginalUrl!''}">点我去采购</a></td>
+        <td>${order.price!''}</td>
+        <td>${order.num!''}</td>
+        <td>${order.remark!''}</td>
+    </tr>
+    </#list>
+    </tbody>
+</table>
+</body>
+</html>

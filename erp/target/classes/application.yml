@@ -1,0 +1,14 @@
+server:
+  port: 22334
+
+spring:
+  application:
+    name: erp
+  profiles:
+    active: dev
+    include: default-${spring.profiles.active}
+
+
+tenant:
+  exclusionTable:
+    - t_community

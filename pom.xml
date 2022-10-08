@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>team.javis.apollo.biz</groupId>
+        <artifactId>biz-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>modules</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <modules>
+        <module>reptile-agent</module>
+        <module>reptile-mgr</module>
+        <module>vendor</module>
+        <module>messager</module>
+        <module>order</module>
+        <module>product</module>
+        <module>portal</module>
+        <module>internal-client</module>
+        <module>publish</module>
+        <module>cookies-pool</module>
+        <module>remote-chrome</module>
+        <module>recognize</module>
+        <module>erp</module>
+        <module>permission</module>
+        <module>operation</module>
+        <module>haipproxy</module>
+        <module>stock</module>
+    </modules>
+
+</project>

@@ -1,0 +1,15 @@
+server:
+  port: 29069
+
+spring:
+  application:
+    name: permission
+  profiles:
+    active: dev
+    include: default-${spring.profiles.active}
+
+tenant:
+  exclusionTable:
+    - t_menu
+    - t_role
+    - t_role_permission

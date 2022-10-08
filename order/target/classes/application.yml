@@ -1,0 +1,9 @@
+server:
+  port: 22339
+
+spring:
+  application:
+    name: order
+  profiles:
+    active: dev
+    include: default-${spring.profiles.active}

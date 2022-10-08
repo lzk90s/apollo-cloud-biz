@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../cookies-pool/.idea/cookies-pool.iml" filepath="$PROJECT_DIR$/../cookies-pool/.idea/cookies-pool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../vendor/.idea/ecommerce-facade.iml" filepath="$PROJECT_DIR$/../vendor/.idea/ecommerce-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../remote-chrome/.idea/remote-chrome.iml" filepath="$PROJECT_DIR$/../remote-chrome/.idea/remote-chrome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/spider.iml" filepath="$PROJECT_DIR$/.idea/spider.iml" />
+    </modules>
+  </component>
+</project>

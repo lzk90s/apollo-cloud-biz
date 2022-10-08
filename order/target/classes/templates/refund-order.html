@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta content="text/html;charset=utf8" http-equiv="content-type"/>
+</head>
+
+<body>
+<h3 style='color:red'>${title}</h3>
+<table border="1">
+    <thead>
+    <tr bgcolor="#FF8F59">
+        <th>订单sn</th>
+        <th>申请退款时间(UTC)</th>
+        <th>截止时间</th>
+        <th>sku</th>
+        <th>图片</th>
+        <th>退款原因</th>
+    </tr>
+    </thead>
+    <tbody>
+    <#list orders as order>
+    <tr bgcolor="<#if order.lastNotifyTime??>#FFFFFF<#else>#AFEEEE</#if>">
+        <td>${order.sn!''}</td>
+        <td><#if order.applyRefundTime??> ${(order.applyRefundTime)?string("yyyy-MM-dd HH:mm:ss")} <#else></
+        #if></td>
+        <td><#if order.deadlineTime??> ${(order.deadlineTime)?string("yyyy-MM-dd HH:mm:ss")} <#else></
+        #if></td>
+        <td>${order.sku!''}</td>
+        <td><img src="${order.imageUrl!''}"/></td>
+        <td>${order.refundReason!''}</td>
+    </tr>
+    </#list>
+    </tbody>
+</table>
+</body>
+</html>

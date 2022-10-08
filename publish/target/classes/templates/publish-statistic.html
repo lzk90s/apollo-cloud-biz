@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta content="text/html;charset=utf8" http-equiv="content-type"/>
+</head>
+
+<body>
+<h3>${title}</h3>
+<ul style='color:blue'>
+    <li>规则名称：${publishConfig.name!''}</li>
+    <li>来源平台：${publishConfig.srcPlatform!''}</li>
+    <li>来源分类：${publishConfig.srcCategory!''}</li>
+    <li>目标平台：${publishConfig.dstPlatform!''}</li>
+    <li>目标账号：${publishConfig.dstPlatformAccount!''}</li>
+    <li>计算公式：${publishConfig.formulas?replace("\n", "; ")}</li>
+</ul>
+<table border="1">
+    <thead>
+    <tr bgcolor="#FF8F59">
+        <th>序号</th>
+        <th>商品ID</th>
+        <th>标题</th>
+        <th>图片</th>
+        <th>忽略商品</th>
+    </tr>
+    </thead>
+    <tbody>
+    <#list records as record>
+    <tr>
+        <td>${record_index!''}</td>
+        <td><a href="${record.detailUrl!''}">${record.id!''}</a></td>
+        <td>${record.subject!''}</td>
+        <td><img height="180" src="${record.mainImageUrl!''}" width="180"/></td>
+        <td><a href="${record.ignoreUrl!''}">
+            <button style="color:blue">忽略请点我</button>
+        </a></td>
+    </tr>
+    </
+    #list>
+    </tbody>
+</table>
+<div>
+    <p><a href="${confirmUrl!''}">
+        <button style="color:red">全部确认？点我上架</button>
+    </a></p>
+</body>
+<div>
+    <p><a href="${reportUrl!''}">
+        <button style="color:red">重新上报？点我重发</button>
+    </a></p>
+</div>
+</html>

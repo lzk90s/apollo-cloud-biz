@@ -1,0 +1,9 @@
+server:
+  port: 22335
+
+spring:
+  application:
+    name: publish
+  profiles:
+    active: dev
+    include: default-${spring.profiles.active}

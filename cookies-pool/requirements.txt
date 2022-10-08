@@ -1,0 +1,5 @@
+requests==2.25.1
+Flask==2.1.1
+redis==3.5.3
+click==8.0.0
+pyppeteer==1.0.2

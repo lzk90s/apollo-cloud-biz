@@ -1,0 +1,17 @@
+server:
+  port: 22334
+
+basePackage: pers.kun.reptilemgr
+
+spring:
+  application:
+    name: reptile-mgr
+  profiles:
+    active: dev
+    include: default-${spring.profiles.active}
+
+
+tenant:
+  exclusionTable:
+    - t_product
+    - t_product_sku

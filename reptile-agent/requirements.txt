@@ -1,0 +1,9 @@
+requests==2.24.0
+click==8.0.0
+baostock==0.8.8
+pandas==1.3.5
+Scrapy==2.5.0
+Twisted==21.2.0
+sche==1.0a5
+beautifulsoup4==4.10.0
+pyppeteer==1.0.2

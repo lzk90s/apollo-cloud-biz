@@ -1,0 +1,9 @@
+server:
+  port: 22334
+
+spring:
+  application:
+    name: residentscard
+  profiles:
+    active: dev
+    include: default-${spring.profiles.active}

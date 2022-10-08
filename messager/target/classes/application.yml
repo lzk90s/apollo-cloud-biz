@@ -1,0 +1,18 @@
+server:
+  port: 22338
+
+spring:
+  profiles:
+    active: dev
+    include: default-${spring.profiles.active}
+  application:
+    name: messager
+
+message:
+  routes:
+    - topic: operation.followSell
+      type: wechat
+      destination: https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=1111
+    - topic: test
+      type: email
+      destination: test@163.com
